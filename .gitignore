@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# Secrets: never commit keys or tokens (copy demos/phone/.env.example to .env)
+.env
+.env.*
+!.env.example
+
+# Datasets, trained weights, caches, results: research or non-commercial licences, never redistributed
+data/
+*.onnx
+*.npz
+*.sqlite
+*.sqlite3
+
+# Call audio, transcripts and logs: personal data
+demos/phone/recordings/
+*.wav
+*.log
+
+# Not part of the public repository
+paper/

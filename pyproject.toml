@@ -1,0 +1,37 @@
+[project]
+name = "turnheed"
+version = "0.1.0"
+description = "HEED: Hesitation-aware End-of-turn Estimation and Decision. Turn-taking for voice agents that waits only when it matters."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = []  # the floor policy and learned wait are pure Python
+keywords = ["voice agents", "turn-taking", "end-of-turn", "stuttering", "accessibility", "pipecat"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+audio = ["numpy", "onnxruntime", "soxr"]                  # still-talking models
+pipecat = ["pipecat-ai[silero]==0.0.108", "numpy", "onnxruntime", "soxr"]
+livekit = ["livekit-agents"]
+bench = ["numpy", "onnxruntime", "onnx", "soxr", "soundfile", "transformers", "torch", "anthropic", "python-dotenv",
+         "pipecat-ai[silero]==0.0.108"]
+demo = ["pipecat-ai[silero,deepgram,anthropic,groq]==0.0.108", "fastapi", "uvicorn", "twilio", "python-dotenv",
+        "websockets", "numpy", "onnxruntime", "soxr", "loguru"]
+dev = ["pytest"]
+
+[project.urls]
+Repository = "https://github.com/yahyasultanch/Hesitation-aware-End-of-turn-Estimation-and-Decision"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["turnheed", "turnheed.plugins"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
