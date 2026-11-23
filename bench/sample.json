@@ -1,0 +1,19 @@
+[
+  {"id": "fluent-1", "condition": "fluent", "segments": [
+    {"start": 0.0, "end": 1.8, "pause_type": "natural"},
+    {"start": 2.1, "end": 3.5, "end_of_turn": true}]},
+  {"id": "fluent-2", "condition": "fluent", "segments": [
+    {"start": 0.0, "end": 1.2, "pause_type": "natural"},
+    {"start": 1.6, "end": 2.4, "pause_type": "word_search"},
+    {"start": 3.1, "end": 4.0, "end_of_turn": true},
+    {"start": 7.0, "end": 8.2, "end_of_turn": true}]},
+  {"id": "stutter-1", "condition": "stuttered", "segments": [
+    {"start": 0.0, "end": 0.9, "pause_type": "block"},
+    {"start": 2.1, "end": 3.0, "pause_type": "repetition"},
+    {"start": 3.6, "end": 4.8, "end_of_turn": true}]},
+  {"id": "stutter-2", "condition": "stuttered", "segments": [
+    {"start": 0.0, "end": 0.6, "pause_type": "block"},
+    {"start": 2.4, "end": 3.2, "pause_type": "natural"},
+    {"start": 3.5, "end": 4.1, "pause_type": "prolongation"},
+    {"start": 4.9, "end": 6.0, "end_of_turn": true}]}
+]
